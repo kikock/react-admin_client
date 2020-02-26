@@ -1,12 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+/**
+ * 入口js  渲染app标签
+ */
 
-ReactDOM.render(<App />, document.getElementById('root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+import React from 'react'
+import ReactDom from 'react-dom'
+// 引入自定义js
+import App from './App'
+import 'antd/dist/antd.min.css'
+//将app组件标签渲染到index页面的div上
+ReactDom.render(<App/>, document.getElementById('root'));
