@@ -31,6 +31,7 @@
 * git push ogigin dev //推送本地 dev 分支到远程 dev 分支
 * git pull origin dev //从远程 dev 分支拉取到本地 dev 分支
 * git clone url //将远程仓库克隆下载到本地
+* git push origin master --force //当前分支代码强行覆盖线上master分支
 ```
 
 1. 首先在 https://github.com/创建一个仓库 得到仓库地址
