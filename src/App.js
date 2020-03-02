@@ -1,35 +1,24 @@
-/**
- * 应用根组件(简单的组件用函数定义,复杂的用类定义)
- */
-
+//基础模块
 import React, {Component} from 'react';
+// 路由模块
+import {BrowserRouter, Route} from 'react-router-dom';
 
-import {Button, message} from 'antd'
+import Login from './pages/login/login';
+import Admin from './pages/admin/admin';
 
+/**
+ * 引用根组件
+ */
 export default class App extends Component {
-
-    handleClick = () => {
-        message.success("点击按钮成功")
-    };
 
     render() {
         return (
-            <div>
-                <Button type="primary" onClick={this.handleClick}>按钮001</Button>
-                <Button>按钮002</Button>
-                <Button type="dashed">按钮003</Button>
-                <Button type="danger">按钮004</Button>
-                <Button type="link">按钮005</Button>
-            </div>
+            <BrowserRouter>
+                <switch> {/*只匹配其中一个*/}
+                    <Route path='/' component={Login}></Route>
+                    <Route path='/admin' component={Admin}></Route>
+                </switch>
+            </BrowserRouter>
         )
     };
 };
-
-//
-// function App () {
-//   return (
-//     <div>这是一个app开始 </div>
-//   );
-// }
-//
-// export default App ;

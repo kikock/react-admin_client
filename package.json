@@ -9,9 +9,12 @@
     "antd": "^3.26.12",
     "babel-plugin-import": "^1.13.0",
     "customize-cra": "^0.9.1",
+    "less": "^3.11.1",
+    "less-loader": "^5.0.0",
     "react": "^16.12.0",
     "react-app-rewired": "^2.1.5",
     "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0"
   },
   "scripts": {
@@ -21,9 +24,12 @@
     "静态服务端运行build文件夹": "serve build",
     "下载andt组件库": "yarn add antd",
     "下载依赖模块": "yarn add react-app-rewired customize-cra babel-plugin-import",
-
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "编码测试, 自动编译打包刷新(加载config-owerrides)": "react-app-rewired start",
+    "生产环境打包(加载config-owerrides)": "react-app-rewired build",
+    "test(加载config-owerrides)": "react-app-rewired test",
+    "eject(加载config-owerrides)": "react-app-rewired eject"
   },
   "eslintConfig": {
     "extends": "react-app"
