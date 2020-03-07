@@ -18,7 +18,7 @@
     "react-scripts": "3.4.0"
   },
   "scripts": {
-    "安装serve": "npm install -g serve",
+    "安装serve": "yarn ",
     "编码测试, 自动编译打包刷新(live-reload)": "react-scripts start",
     "生产环境打包": "react-scripts build",
     "静态服务端运行build文件夹": "serve build",
