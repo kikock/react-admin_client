@@ -4,7 +4,7 @@ import {
     Form,
     Icon,
     Input,
-    Button,
+    Button
 } from 'antd'
 // import {connect} from 'react-redux'
 
@@ -73,7 +73,7 @@ class Login extends Component {
         // 如果用户已经登陆, 自动跳转到管理界面
         const user = this.props.user;
         if (user && user._id) {
-            return <Redirect to='/admin'/>
+            return <Redirect to="/admin"/>
         }
 
         // 得到具强大功能的form对象
@@ -107,11 +107,10 @@ class Login extends Component {
                                         {required: true, whitespace: true, message: '用户名必须输入'},
                                         {min: 4, message: '用户名至少4位'},
                                         {max: 12, message: '用户名最多12位'},
-                                        {pattern: /^[a-zA-Z0-9_]+$/, message: '用户名必须是英文、数字或下划线组成'},
+                                        {pattern: /^[a-zA-Z0-9_]+$/, message: '用户名必须是英文、数字或下划线组成'}
                                     ],
-                                    initialValue: 'admin', // 初始值
-                                })
-                                (
+                                    initialValue: 'admin' // 初始值
+                                })(
                                     <Input
                                         prefix={<Icon type="user" style={{color: 'rgba(0,0,0,.25)'}}/>}
                                         placeholder="用户名"
