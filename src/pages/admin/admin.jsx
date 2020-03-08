@@ -11,5 +11,5 @@ export default class Admin extends Component {
                 这是admin页面
             </div>
         )
-    };
-};
+    }
+}

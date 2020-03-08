@@ -28,6 +28,15 @@ module.exports = {
     "plugins": [
         "react"
     ],
+    "settings": {
+        "react": {
+            // 修复警告(未指定React版本)：React version not specified in eslint-plugin-react settings
+            "version": "require('./package.json').devDependencies.react"
+        },
+        "import/ignore": [
+            "node_modules"
+        ]
+    },
     "rules": {
         /**
          * off 或 0：表示不验证规则。
@@ -128,10 +137,5 @@ module.exports = {
         "object-shorthand": 0,   // 要求或禁止对象字面量中方法和属性使用简写语法
         "prefer-template": 0,     // 要求使用模板字面量而非字符串连接
 
-    },
-    "settings": {
-        "import/ignore": [
-            "node_modules"
-        ]
     }
 };
